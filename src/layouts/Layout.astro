@@ -1,3 +1,10 @@
+---
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -8,15 +15,30 @@
 		<title>Astro Basics</title>
 	</head>
 	<body>
+		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+<style is:global>
+	:root{
+		color-scheme: light dark;
+	}
+	html{
+		font-family: sans-serif;
+		scroll-behavior: smooth;
+	}
+	body{
+		background: #2b2f3e;
+
+	}
+	@media(prefers-reduced-motion: reduce){
+		*{
+			animation-duration: 0.01ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.01ms !important;
+			scroll-behavior: auto !important;
+		}
 	}
 </style>

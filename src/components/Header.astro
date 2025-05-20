@@ -1,0 +1,53 @@
+---
+
+
+---
+
+<header class="bg-[#2b2f3e] text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+
+      <!-- Menú Hamburguesa solo visible en móvil -->
+      <div class="md:hidden">
+        <button class="text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Elementos solo para escritorio -->
+      <nav class="hidden md:flex space-x-8">
+        <ul class="flex space-x-6 text-sm">
+          <li><a href="/" class="hover:underline">Inicio</a></li>
+          <li><a href="/" class="hover:underline">Servicios</a></li>
+          <li><a href="/" class="hover:underline">Eventos Especiales</a></li>
+        </ul>
+      </nav>
+
+      <!-- Logo centrado (se mantiene en el centro gracias a flex-1 en los lados) -->
+      <div class="flex-1 flex items-center justify-center md:justify-center">
+        <a href="/">
+          <img src="/logo.png" alt="Logo" class="h-6" />
+        </a>
+      </div>
+
+      <!-- Botón Contacto móvil -->
+      <div class="md:hidden">
+        <button class="bg-black text-white px-2 py-1 text-xs rounded">
+          Contáctanos
+        </button>
+      </div>
+
+
+      <div class="hidden md:block">
+        <button class="bg-black text-white px-4 py-1 text-sm rounded hover:bg-gray-800 transition">
+          Contáctanos
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
